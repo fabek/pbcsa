@@ -1,0 +1,6 @@
+{ "_id" : { "$oid" : "55817f385e1d308f27b24372" }, "imie" : "Stefan", "nazwisko" : "Provider", "stanowisko" : "Doradca Klienta", "wiadomosci" : [ "wiadomosc do wszystkich!", "222222222222222", "to jest wiadomoœæ do wszystkich!" ] }
+{ "_id" : { "$oid" : "55817f3e5e1d308f27b24373" }, "imie" : "Anna", "nazwisko" : "Nowak", "stanowisko" : "Sprzataczka", "wiadomosci" : [ "kobiety!!!!" ] }
+{ "_id" : { "$oid" : "5581808cebb0d2cbd6aae827" }, "imie" : "Janina", "nazwisko" : "Morska", "stanowisko" : "Sekretariat", "wiadomosci" : [ "wiadomosc do wszystkich!", "kobiety!!!!", "Wszystkiego najlepszego!! :)", "to jest wiadomoœæ do wszystkich!" ] }
+{ "_id" : { "$oid" : "558180aaebb0d2cbd6aae828" }, "imie" : "Aleksandra", "nazwisko" : "Major", "stanowisko" : "Handlowiec", "wiadomosci" : [ "kobiety!!!!", "Wszystkiego najlepszego!! :)", "to jest wiadomoœæ do wszystkich!" ] }
+{ "_id" : { "$oid" : "558180d7ebb0d2cbd6aae829" }, "imie" : "Lukasz", "nazwisko" : "Majewski", "stanowisko" : "Handlowiec", "wiadomosci" : [ "wiadomosc do wszystkich!", "222222222222222", "to jest wiadomoœæ do wszystkich!" ] }
+{ "_id" : { "$oid" : "558180e6ebb0d2cbd6aae82a" }, "imie" : "Alicja", "nazwisko" : "Arent", "stanowisko" : "Pose³", "wiadomosci" : [ "wiadomosc do wszystkich!", "kobiety!!!!", "Wszystkiego najlepszego!! :)", "to jest wiadomoœæ do wszystkich!" ] }

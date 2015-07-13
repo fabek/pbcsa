@@ -32,7 +32,7 @@ myApp.controller('AppCtrl', function ($scope, $http, socket, ngDialog) {
                 console.log(response);
                 $scope.wiadomosc = response.wiadomosci.pop();
                 ngDialog.open({
-                    template: 'modal.html',
+                    template: 'css/modal.html',
                     className: 'ngdialog-theme-default',
                     scope: $scope
                 });
