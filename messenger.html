@@ -1,0 +1,56 @@
+<!DOCTYPE>
+<html ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <title>PBCSA Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="css/sortable-theme-bootstrap.css" />
+  <link rel="stylesheet" href="css/ngDialog.min.css" />
+  <link rel="stylesheet" href="css/ngDialog-theme-default.min.css" />
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+ 
+ <div class="container" ng-controller="AppCtrl">
+
+  <h1>Masowa wysyłka wiadomości</h1>
+  
+     <form class="myform">
+           <div class="text-right">Pozostało {{250-form.message.length}} znaków</div>
+           <textarea rows="5" cols="80" ng-model="form.message" ngMinlength="8" ngMaxlength="250"></textarea>
+           <button class="btn btn-info" ng-click="sendMessage()">Wyślij</button>
+           <span class="label label-warning">{{status}}</span>
+     </form>
+</div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.12/angular.min.js"></script>
+  <script src="https://cdn.socket.io/socket.io-1.3.5.js"></script>
+  <script>
+  var myApp = angular.module('myApp', []);
+    
+    myApp.factory('socket', function(){
+        return io.connect('http://62.113.202.78:3000');
+    });
+    
+    myApp.controller('AppCtrl', function($scope, $http, socket) {
+    
+      $scope.sendMessage = function() {
+        if($scope.form.message.length > 7) {
+          console.log('POST DATA: ' + $scope.form);
+          $http.post('http://62.113.202.78:3000/data', $scope.form).success(function(response) {
+            console.log(response);
+            socket.emit('NEWMESSAGE', {message: $scope.form.message});
+            console.log('NEWMESSAGE');
+            $scope.status = "Wiadomość wysłano!"
+          });
+        }
+        else $scope.status = "Błąd: Wpisz minimum 8 znaków!"
+      };
+     
+    });
+  </script>
+
+</body>
+</html>

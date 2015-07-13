@@ -1,0 +1,21 @@
+{
+  "name": "pbcsa",
+  "version": "1.0.0",
+  "description": "example for pbcsa",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.13.1",
+    "node-schedule": "^0.2.9",
+    "socket.io": "^1.3.5",
+    "express": "^4.12.4",
+    "cors": "^2.7.1",
+    "mongojs": "^1.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "fabek",
+  "license": "ISC"
+}

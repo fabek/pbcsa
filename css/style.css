@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+.row-space{
+  margin-top: 40px;
+}
+.table-custom{
+  max-width: 991px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.myform{
+      max-width: 600px;
+}
+.myform .text-right{
+       text-align: right;
+}
+.myform textarea{
+       width: 100%;
+}
+
