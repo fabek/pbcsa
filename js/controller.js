@@ -1,7 +1,7 @@
 var myApp = angular.module('myApp', ['ngDialog']);
 
 myApp.factory('socket', function () {
-    return io.connect('http://62.113.202.78:3000');
+    return io.connect('http://212.18.233.173:3000');
 });
 
 myApp.factory()
@@ -10,7 +10,7 @@ myApp.controller('AppCtrl', function ($scope, $http, socket, ngDialog) {
     console.log(socket);
 
     function refresh() {
-        $http.get('http://62.113.202.78:3000/data').success(function (response) {
+        $http.get('http://212.18.233.173:3000/data').success(function (response) {
             console.log("HTTP:");
             console.log(response);
             $scope.contactlist = response;
@@ -27,7 +27,7 @@ myApp.controller('AppCtrl', function ($scope, $http, socket, ngDialog) {
 
     $scope.getMessage = function (id, len) {
         if (len > 0) {
-            $http.get('http://62.113.202.78:3000/data/' + id).success(function (response) {
+            $http.get('http://212.18.233.173:3000/data/' + id).success(function (response) {
                 console.log("HTTP:");
                 console.log(response);
                 $scope.wiadomosc = response.wiadomosci.pop();
@@ -36,7 +36,7 @@ myApp.controller('AppCtrl', function ($scope, $http, socket, ngDialog) {
                     className: 'ngdialog-theme-default',
                     scope: $scope
                 });
-                $http.delete('http://62.113.202.78:3000/data/' + id).success(function (response) {
+                $http.delete('http://212.18.233.173:3000/data/' + id).success(function (response) {
                     console.log("HTTP:");
                     console.log(response);
                 });

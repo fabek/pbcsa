@@ -17,6 +17,6 @@ Nale¿y otworzyæ plik index.html w przegl¹darce w celu wyœwietlania listy pracown
 3. Jak uruchomiæ w³asny serwer?
 
 Nale¿y zainstalowaæ nodejs oraz mongodb na maszynie, skopiowaæ pliki z !server oraz zaimportowaæ bazê danych z pliku mongo.txt, nastêpnie wykonaæ polecenia 'nodejs server.js' lub 'nodejs spam.js'.
-Obecnie w celach testowych uruchomiony zosta³ serwer node.js oraz mongodb pod adresem http://62.113.202.78:3000 (system Debian 7).
+Obecnie w celach testowych uruchomiony zosta³ serwer node.js oraz mongodb pod adresem http://212.18.233.173:3000 (system Debian 7).
 
 Pozdrawiam, FB.
